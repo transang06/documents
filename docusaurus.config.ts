@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Knowledge',
-  tagline: 'Dinosaurs are cool',
+  title: 'Bright mind',
+  tagline: 'Knowledge',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -66,17 +66,58 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Bright mind',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Bright mind Logo',
         src: 'img/logo.svg',
       },
       items: [
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'allSidebar',
+        //   position: 'left',
+        //   label: 'All',
+        // },
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'backendSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Backend',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'frontendSidebar',
+          position: 'left',
+          label: 'Frontend',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'cloudSidebar',
+          position: 'left',
+          label: 'Cloud',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'aiSidebar',
+          position: 'left',
+          label: 'AI',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'dataSidebar',
+          position: 'left',
+          label: 'Data',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'englishSidebar',
+          position: 'left',
+          label: 'English',
+        }, {
+          type: 'docSidebar',
+          sidebarId: 'japaneseSidebar',
+          position: 'left',
+          label: 'Japanese',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
@@ -89,47 +130,47 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/transang06/documents',
-            },
-          ],
-        },
+        // {
+        //   title: 'Docs',
+        //   items: [
+        //     {
+        //       label: 'Tutorial',
+        //       to: '/docs/intro',
+        //     },
+        //   ],
+        // },
+        //     {
+        //       title: 'Community',
+        //       items: [
+        //         {
+        //           label: 'Stack Overflow',
+        //           href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+        //         },
+        //         {
+        //           label: 'Discord',
+        //           href: 'https://discordapp.com/invite/docusaurus',
+        //         },
+        //         {
+        //           label: 'X',
+        //           href: 'https://x.com/docusaurus',
+        //         },
+        //       ],
+        //     },
+        // {
+        //   title: 'More',
+        //   items: [
+        //     {
+        //       label: 'Blog',
+        //       to: '/blog',
+        //     },
+        //     {
+        //       label: 'GitHub',
+        //       href: 'https://github.com/transang06/documents',
+        //     },
+        //   ],
+        // },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Bright mind`,
     },
     prism: {
       theme: prismThemes.github,
