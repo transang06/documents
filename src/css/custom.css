@@ -5,7 +5,17 @@
  */
 
 /* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
 :root {
+  /* --ifm-font-family-base: 'IBM Plex Sans', sans-serif;
+  --ifm-heading-font-family: 'IBM Plex Sans', sans-serif;
+  --ifm-font-family-base: 'Space Grotesk', sans-serif;
+  --ifm-heading-font-family: 'Space Grotesk', sans-serif; */
+  --ifm-font-family-base: 'Plus Jakarta Sans', sans-serif;
+  --ifm-heading-font-family: 'Plus Jakarta Sans', sans-serif;
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
