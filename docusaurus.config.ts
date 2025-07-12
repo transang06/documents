@@ -1,7 +1,8 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
@@ -40,6 +41,8 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/transang06/documents/blob/master/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
@@ -72,52 +75,58 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'allSidebar',
-        //   position: 'left',
-        //   label: 'All',
-        // },
         {
-          type: 'docSidebar',
-          sidebarId: 'backendSidebar',
+          label: 'Development',
           position: 'left',
-          label: 'Backend',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'backendSidebar',
+              label: 'Backend',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'frontendSidebar',
+              label: 'Frontend',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cloudSidebar',
+              label: 'Cloud',
+            },
+          ],
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'frontendSidebar',
+          label: 'AI & Data',
           position: 'left',
-          label: 'Frontend',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'aiSidebar',
+              label: 'AI',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'dataSidebar',
+              label: 'Data',
+            },
+          ],
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'cloudSidebar',
+          label: 'Languages',
           position: 'left',
-          label: 'Cloud',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'aiSidebar',
-          position: 'left',
-          label: 'AI',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'dataSidebar',
-          position: 'left',
-          label: 'Data',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'englishSidebar',
-          position: 'left',
-          label: 'English',
-        }, {
-          type: 'docSidebar',
-          sidebarId: 'japaneseSidebar',
-          position: 'left',
-          label: 'Japanese',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'englishSidebar',
+              label: 'English',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'japaneseSidebar',
+              label: 'Japanese',
+            },
+          ],
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
@@ -188,6 +197,15 @@ const config: Config = {
         language: ['en', 'vi'],
       },
     ],
+  ],
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
   markdown: {
     mermaid: true,
