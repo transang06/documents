@@ -53,9 +53,9 @@ RRF sẽ tính điểm cho từng tài liệu bằng cách:
 
 ---
 
-## Ví dụ Python
+## Ví dụ
 
-```python
+```python title="python"
 def reciprocal_rank_fusion(results, k=60):
     """
     results: list of lists of doc_ids, mỗi list là kết quả từ 1 hệ thống tìm kiếm
